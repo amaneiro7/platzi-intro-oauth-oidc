@@ -2,6 +2,7 @@ import cookie from "cookie";
 
 export default async function handler(req, res) {
   const cookies = cookie.parse(req.headers.cookie);
+  console.log('[cookies]',cookies.access_token);
 
   try {
     const response = await fetch(req.query.url, {
